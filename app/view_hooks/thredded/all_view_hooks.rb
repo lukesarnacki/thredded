@@ -51,10 +51,13 @@ module Thredded
       attr_reader :actions
       # @return [Thredded::AllViewHooks::ViewHook]
       attr_reader :mark_as_unread
+      # @return [Thredded::AllViewHooks::ViewHook]
+      attr_reader :content
 
       def initialize
         @actions = ViewHook.new
         @mark_as_unread = ViewHook.new
+        @content = ViewHook.new
       end
     end
 
